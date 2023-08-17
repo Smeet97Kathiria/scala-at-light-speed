@@ -49,6 +49,7 @@ object FunctionalProgramming extends App {
       override def apply(x: Int) = 2 * x
     }
    */
+// In scala every single object or collections are immutable, it always returns a new instance for that object or collection.
 
   // higher-order functions: take functions as args/return functions as results
   val aMappedList: List[Int] = List(1,2,3).map(x => x + 1) // HOF
@@ -73,8 +74,10 @@ object FunctionalProgramming extends App {
 
   // lists
   val aList = List(1,2,3,4,5)
-  val firstElement = aList.head
-  val rest = aList.tail
+  val firstElement = aList.head // head is the first element in the list
+  val rest = aList.tail // tail is the rest of the elements except the first one
+  println(firstElement)
+  println(rest)
   val aPrependedList = 0 :: aList // List(0,1,2,3,4,5)
   val anExtendedList = 0 +: aList :+ 6 // List(0,1,2,3,4,5,6)
 
