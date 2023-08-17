@@ -19,15 +19,17 @@ object ObjectOrientation extends App {
   val aDog = new Dog("Lassie")
 
   // constructor arguments are NOT fields: need to put a val before the constructor argument
-  aDog.name
+  aDog.name // if val was not added before name, in constructor, compiler will complain since name argument is ephemeral, it is not visible outside the constructor class argument.
 
   // subtype polymorphism
   val aDeclaredAnimal: Animal = new Dog("Hachi")
   aDeclaredAnimal.eat() // the most derived method will be called at runtime
 
-  // abstract class
+  // abstract class, meaning not all methods needs to have an implementation.
   abstract class WalkingAnimal {
     val hasLegs = true // by default public, can restrict by adding protected or private
+    // private means only class has access to it.
+    // protected means this class and all its descendants have access to the class method and variables.
     def walk(): Unit
   }
 
@@ -134,7 +136,7 @@ object ObjectOrientation extends App {
    */
   val reversedList = aList.reverse // returns a NEW list
 
-  // Point #2: Scala is closest to the OO ideal
+  // Point #2: Scala is closest to the OO ( Object Oriented )  ideal
 
 
 }
