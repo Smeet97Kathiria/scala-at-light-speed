@@ -102,7 +102,6 @@ object ObjectOrientation extends App {
   case class Person(name: String, age: Int)
   // may be constructed without new
   val bob = Person("Bob", 54) // Person.apply("Bob", 54)
-
   // exceptions
   try {
     // code that can throw

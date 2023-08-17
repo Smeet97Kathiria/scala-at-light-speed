@@ -37,4 +37,15 @@ object PatternMatching extends App {
 
   // if PM doesn't match anything, it will throw a MatchError
   // PM will try all cases in sequence
+
+  def reverseList[T](lst: List[T]): List[T] = lst match {
+    case Nil => Nil
+    case head :: tail => reverseList(tail) :+ head
+  }
+
+  val myList = List(1, 2, 3, 4, 5)
+  val mystringList = List("I","am","Smeet")
+  val reversedList = reverseList(mystringList)
+
+  println(reversedList)
 }
