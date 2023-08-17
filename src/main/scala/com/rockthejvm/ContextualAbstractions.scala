@@ -11,7 +11,8 @@ object ContextualAbstractions {
 //  val anOrderedList = aList.sorted // contextual argument: (descendingOrdering)
 //
 //  // Ordering
-//  given descendingOrdering: Ordering[Int] = Ordering.fromLessThan(_ > _) // (a,b) => a > b
+//  given descendingOrdering: Ordering[Int] = Ordering.fromLessThan(_ > _) // (a,b) => a > b  // sorted by default takes in a ordering function for sorting, by default sorting is in ascending order,
+  // // for sorting in descending we can create our own ordering function using given which tells the compiler to use the ordering function present in the context and not the default.
 //
 //  // analogous to an implicit val
 //
