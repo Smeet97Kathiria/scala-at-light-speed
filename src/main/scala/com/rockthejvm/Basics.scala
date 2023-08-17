@@ -1,5 +1,6 @@
 package com.rockthejvm
 
+// extends app mean whatever is inside the { } can be executed as standalone application.
 object Basics extends App {
 
   // defining a value
@@ -51,10 +52,10 @@ object Basics extends App {
     factorial(1) = 1
    */
 
-  // In Scala we don't use loops or iteration, we use RECURSION!
+  // In Scala we don't use loops or iteration, we use RECURSION! Iteration is heavily discouraged in Scala.
 
   // the Unit type = no meaningful value === "void" in other languages
-  // type of SIDE EFFECTS
+  // type of SIDE EFFECTS ( Because it has nothing do with computing meaningful information )
   println("I love Scala") // System.out.println, printf, print, console.log
 
   def myUnitReturningFunction(): Unit = {
